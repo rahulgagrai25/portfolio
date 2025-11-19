@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 function DecryptedText({ text, className = '' }: { text: string; className?: string }) {
   const [displayText, setDisplayText] = useState<string>(text);
@@ -182,9 +183,9 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <a href="#" className="text-white group-hover:text-black font-black uppercase mt-4 relative z-10 flex items-center gap-2 group/link font-mono border-2 border-white group-hover:border-black px-4 py-2 hover:bg-white hover:text-black transition-colors">
+            <Link href="/projects" className="text-white group-hover:text-black font-black uppercase mt-4 relative z-10 flex items-center gap-2 group/link font-mono border-2 border-white group-hover:border-black px-4 py-2 hover:bg-white hover:text-black transition-colors">
               View All <span className="group-hover/link:translate-x-1 transition-transform">→</span>
-            </a>
+            </Link>
           </div>
 
           {/* Education */}
