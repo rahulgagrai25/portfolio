@@ -59,14 +59,16 @@ export default function AdminPage() {
         title: 'E-Commerce Platform',
         description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB',
         technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-        year: '2024'
+        year: '2024',
+        url: 'https://github.com/rahulgagrai25/ecommerce-platform'
       },
       {
         id: 2,
         title: 'Task Management App',
         description: 'Collaborative task management with real-time updates',
         technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
-        year: '2023'
+        year: '2023',
+        url: 'https://github.com/rahulgagrai25/task-manager'
       }
     ],
     stats: {
@@ -80,7 +82,8 @@ export default function AdminPage() {
     title: '',
     description: '',
     technologies: '',
-    year: ''
+    year: '',
+    url: ''
   });
 
   const handleInputChange = (section: string, field: string, value: any) => {
@@ -121,7 +124,7 @@ export default function AdminPage() {
         ...prev,
         projects: [...prev.projects, project]
       }));
-      setNewProject({ title: '', description: '', technologies: '', year: '' });
+      setNewProject({ title: '', description: '', technologies: '', year: '', url: '' });
     }
   };
 
@@ -434,6 +437,17 @@ export default function AdminPage() {
                       />
                     </div>
                   </div>
+                
+                <div>
+                  <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">URL</label>
+                  <input
+                    type="text"
+                    value={project.url ?? ''}
+                    onChange={(e) => handleArrayChange('projects', index, 'url', e.target.value)}
+                    className="w-full bg-black border-2 border-white p-2 text-white font-mono text-sm focus:outline-none focus:bg-white focus:text-black transition-colors"
+                    placeholder="https://..."
+                  />
+                </div>
                   
                   <div>
                     <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">DESCRIPTION</label>
@@ -483,6 +497,17 @@ export default function AdminPage() {
                       className="w-full bg-black border-2 border-white p-2 text-white font-mono text-sm focus:outline-none focus:bg-white focus:text-black transition-colors"
                     />
                   </div>
+                </div>
+                
+                <div>
+                  <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">URL</label>
+                  <input
+                    type="text"
+                    value={newProject.url}
+                    onChange={(e) => setNewProject({ ...newProject, url: e.target.value })}
+                    className="w-full bg-black border-2 border-white p-2 text-white font-mono text-sm focus:outline-none focus:bg-white focus:text-black transition-colors"
+                    placeholder="https://..."
+                  />
                 </div>
                 
                 <div>

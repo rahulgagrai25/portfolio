@@ -224,6 +224,94 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        {/* Contact Section */}
+        <div className="mt-12 border-t-4 border-white pt-8">
+          <div className="mb-6 flex items-center gap-3">
+            <div className="h-1 w-12 bg-white"></div>
+            <span className="text-white font-mono font-bold uppercase tracking-widest text-xl">
+              <DecryptedText text="CONTACT" />
+            </span>
+            <div className="h-1 flex-1 bg-white"></div>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Contact Info */}
+            <div className="bg-black border-4 border-white p-6 hover:bg-white hover:text-black transition-all duration-200 relative group">
+              <div className="absolute top-0 right-0 w-0 h-0 border-l-[40px] border-l-transparent border-t-[40px] border-t-white group-hover:border-t-black transition-colors"></div>
+              <div className="relative z-10">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="h-1 w-8 bg-white group-hover:bg-black transition-colors"></div>
+                  <span className="text-white group-hover:text-black font-mono uppercase font-bold">Info</span>
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-1">EMAIL</div>
+                    <a 
+                      href="mailto:rahulgagrai250703@gmail.com" 
+                      className="text-white group-hover:text-black font-mono font-bold hover:underline"
+                    >
+                      rahulgagrai250703@gmail.com
+                    </a>
+                  </div>
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-1">AVAILABILITY</div>
+                    <div className="text-white group-hover:text-black font-mono font-bold">Open to Opportunities</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div className="bg-black border-4 border-white p-6 hover:bg-white hover:text-black transition-all duration-200 relative group">
+              <div className="absolute top-0 right-0 w-0 h-0 border-l-[40px] border-l-transparent border-t-[40px] border-t-white group-hover:border-t-black transition-colors"></div>
+              <div className="relative z-10">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="h-1 w-8 bg-white group-hover:bg-black transition-colors"></div>
+                  <span className="text-white group-hover:text-black font-mono uppercase font-bold">Social</span>
+                </div>
+                <div className="space-y-3">
+                  <a 
+                    href="https://github.com/rahulgagrai25" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between gap-3 text-white group-hover:text-black font-mono font-bold uppercase border-2 border-white group-hover:border-black px-4 py-3 hover:bg-white hover:text-black transition-all duration-200 group/button"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-1 h-6 bg-white group-hover:bg-black transition-colors"></div>
+                      <span>GitHub</span>
+                    </div>
+                    <span className="group-hover/button:translate-x-1 transition-transform">→</span>
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/rahul-gagrai-0552b824a/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between gap-3 text-white group-hover:text-black font-mono font-bold uppercase border-2 border-white group-hover:border-black px-4 py-3 hover:bg-white hover:text-black transition-all duration-200 group/button"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-1 h-6 bg-white group-hover:bg-black transition-colors"></div>
+                      <span>LinkedIn</span>
+                    </div>
+                    <span className="group-hover/button:translate-x-1 transition-transform">→</span>
+                  </a>
+                  {/* <a 
+                    href="https://twitter.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-between gap-3 text-white group-hover:text-black font-mono font-bold uppercase border-2 border-white group-hover:border-black px-4 py-3 hover:bg-white hover:text-black transition-all duration-200 group/button"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-1 h-6 bg-white group-hover:bg-black transition-colors"></div>
+                      <span>Twitter</span>
+                    </div>
+                    <span className="group-hover/button:translate-x-1 transition-transform">→</span>
+                  </a> */}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
