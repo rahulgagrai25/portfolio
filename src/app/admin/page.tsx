@@ -46,34 +46,101 @@ export default function AdminPage() {
       bio: 'I can, because I did.\nMy vast variety of skills is continuously expanding.'
     },
     experience: [
-      { id: 1, period: '2021-now', role: 'Senior Developer', company: 'Tech Corp' },
-      { id: 2, period: '2019-2021', role: 'Full-stack Developer', company: 'Startup Inc.' }
+      { id: 1, period: '2025 - Present', role: 'Web Developer', company: 'Apparotech Innovations' }
     ],
     education: [
-      { id: 1, period: '2021-2025', degree: 'B.Tech in Computer Science and Engineering', institution: 'University Name' }
+      { id: 1, period: '2021-2025', degree: 'B.Tech in Computer Science and Engineering', institution: 'Cambridge Institute of Technology' }
     ],
-    skills: ['JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js', 'MongoDB', 'Tailwind CSS', 'Git', 'Docker', 'AWS'],
+    skills: [
+      { id: 1, category: 'Programming Languages', skills: ['C++', 'Java', 'Python'] },
+      { id: 2, category: 'App Technologies', skills: ['Java', 'Kotlin', 'SQLite', 'Firebase'] },
+      { id: 3, category: 'Database Systems', skills: ['MySQL', 'MongoDB'] },
+      { id: 4, category: 'Analytics', skills: ['Python', 'Excel', 'SQL', 'Power BI', 'Jupyter'] },
+      { id: 5, category: 'Version Control', skills: ['Git'] },
+      { id: 6, category: 'Operating Systems', skills: ['Windows'] },
+      { id: 7, category: 'UI/Web Designing', skills: ['Figma', 'Photoshop', 'HTML', 'CSS', 'Tailwind', 'React', 'NextJS'] }
+    ],
     projects: [
       {
         id: 1,
-        title: 'E-Commerce Platform',
-        description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB',
-        technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-        year: '2024',
-        url: 'https://github.com/rahulgagrai25/ecommerce-platform'
+        title: 'BrainTechh Engineers Pvt. Ltd.',
+        description: 'A professional, fully responsive website designed for BrainTechh Engineers Pvt. Ltd.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'WEB3'],
+        year: '2025',
+        url: 'https://braintechh.com'
       },
       {
         id: 2,
-        title: 'Task Management App',
-        description: 'Collaborative task management with real-time updates',
-        technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
-        year: '2023',
-        url: 'https://github.com/rahulgagrai25/task-manager'
+        title: 'Avenue Nails & Spa - Canada',
+        description: 'A professional, fully responsive website designed for Avenue Nails & Spa.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'WEB3'],
+        year: '2025',
+        url: 'https://avenuenailsandspa.ca'
+      },
+      {
+        id: 3,
+        title: 'Aaron S. Murray - Yoga & Wellness',
+        description: 'Personal website for Aaron S. Murray, a Yoga and Wellness instructor.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        year: '2025',
+        url: 'https://aaron-yoga.netlify.app'
+      },
+      {
+        id: 4,
+        title: 'Shreya Vision - Eye Care Center',
+        description: 'A professional, fully responsive website designed for Shreya Vision - Eye Care Center.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'WEB3'],
+        year: '2025',
+        url: 'https://shreya-vision.netlify.app'
+      },
+      {
+        id: 5,
+        title: 'RecruitEZ - Job Portal',
+        description: 'A professional, fully responsive website designed for RecruitEZ - Job Portal.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        year: '2025',
+        url: 'https://recruitez-369.netlify.app'
+      },
+      {
+        id: 6,
+        title: 'Labib Dental Clinic - Dubai',
+        description: 'A professional, fully responsive website designed for Labib Dental Clinic - Dubai.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        year: '2025',
+        url: 'https://labib-dental-clinic.netlify.app'
+      },
+      {
+        id: 7,
+        title: 'Garima Dhankhar - Lawyer',
+        description: 'A professional, fully responsive website designed for Garima Dhankhar - Lawyer.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        year: '2025',
+        url: 'https://law-advocate.netlify.app'
+      },
+      {
+        id: 8,
+        title: 'Dolled Up Dimple - Makeup Artist',
+        description: 'A professional, fully responsive website designed for Dolled Up Dimple - Beautician.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        year: '2025',
+        url: 'https://dolled-up-dimple.netlify.app'
+      },
+      {
+        id: 9,
+        title: 'Nikunj Byara - Lawn & Resort',
+        description: 'A professional, fully responsive website designed for Nikunj Byara - Lawn & Resort.',
+        technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+        year: '2025',
+        url: 'https://resort-website2.netlify.app'
       }
     ],
+    social: [
+      { id: 1, platform: 'GitHub', url: 'https://github.com/rahulgagrai25' },
+      { id: 2, platform: 'LinkedIn', url: 'https://www.linkedin.com/in/rahul-gagrai-0552b824a/' }
+    ],
     stats: {
-      projects: '50+',
-      experience: '5+'
+      projects: '20+',
+      experience: '4+'
     }
   });
 
@@ -85,6 +152,7 @@ export default function AdminPage() {
     year: '',
     url: ''
   });
+  const [newSkill, setNewSkill] = useState<{ [categoryId: number]: string }>({});
 
   const handleInputChange = (section: string, field: string, value: any) => {
     setFormData(prev => ({
@@ -105,10 +173,114 @@ export default function AdminPage() {
     }));
   };
 
-  const handleSkillsChange = (value: string) => {
+  const addSkillCategory = () => {
+    const newCategory = {
+      id: Date.now(),
+      category: '',
+      skills: []
+    };
     setFormData(prev => ({
       ...prev,
-      skills: value.split(',').map(s => s.trim()).filter(s => s)
+      skills: [...prev.skills, newCategory]
+    }));
+  };
+
+  const deleteSkillCategory = (id: number) => {
+    setFormData(prev => ({
+      ...prev,
+      skills: prev.skills.filter(cat => cat.id !== id)
+    }));
+  };
+
+  const updateCategoryName = (categoryId: number, name: string) => {
+    setFormData(prev => ({
+      ...prev,
+      skills: prev.skills.map(cat =>
+        cat.id === categoryId ? { ...cat, category: name } : cat
+      )
+    }));
+  };
+
+  const addSkillToCategory = (categoryId: number, skill: string) => {
+    if (skill.trim()) {
+      setFormData(prev => ({
+        ...prev,
+        skills: prev.skills.map(cat =>
+          cat.id === categoryId
+            ? { ...cat, skills: [...cat.skills, skill.trim()] }
+            : cat
+        )
+      }));
+    }
+  };
+
+  const deleteSkillFromCategory = (categoryId: number, skillIndex: number) => {
+    setFormData(prev => ({
+      ...prev,
+      skills: prev.skills.map(cat =>
+        cat.id === categoryId
+          ? { ...cat, skills: cat.skills.filter((_, i) => i !== skillIndex) }
+          : cat
+      )
+    }));
+  };
+
+  const addExperience = () => {
+    const newExp = {
+      id: Date.now(),
+      period: '',
+      role: '',
+      company: ''
+    };
+    setFormData(prev => ({
+      ...prev,
+      experience: [...prev.experience, newExp]
+    }));
+  };
+
+  const deleteExperience = (id: number) => {
+    setFormData(prev => ({
+      ...prev,
+      experience: prev.experience.filter(e => e.id !== id)
+    }));
+  };
+
+  const addEducation = () => {
+    const newEdu = {
+      id: Date.now(),
+      period: '',
+      degree: '',
+      institution: ''
+    };
+    setFormData(prev => ({
+      ...prev,
+      education: [...prev.education, newEdu]
+    }));
+  };
+
+  const deleteEducation = (id: number) => {
+    setFormData(prev => ({
+      ...prev,
+      education: prev.education.filter(e => e.id !== id)
+    }));
+  };
+
+  const addSocial = () => {
+    const newSocial = {
+      id: Date.now(),
+      platform: '',
+      url: ''
+    };
+    setFormData(prev => ({
+      ...prev,
+      social: [...prev.social, newSocial]
+    }));
+  };
+
+  const deleteSocial = (id: number) => {
+    setFormData(prev => ({
+      ...prev,
+      social: prev.social.filter(s => s.id !== id)
     }));
   };
 
@@ -147,6 +319,7 @@ export default function AdminPage() {
     { id: 'education', label: 'EDUCATION' },
     { id: 'skills', label: 'SKILLS' },
     { id: 'projects', label: 'PROJECTS' },
+    { id: 'social', label: 'SOCIAL' },
     { id: 'stats', label: 'STATS' }
   ];
 
@@ -281,13 +454,30 @@ export default function AdminPage() {
           {/* Experience */}
           {activeSection === 'experience' && (
             <div className="bg-black border-4 border-white p-6 space-y-6">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-white"></div>
-                <span className="text-white font-mono font-bold uppercase tracking-widest">WORK EXPERIENCE</span>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="h-1 w-12 bg-white"></div>
+                  <span className="text-white font-mono font-bold uppercase tracking-widest">WORK EXPERIENCE</span>
+                </div>
+                <button
+                  onClick={addExperience}
+                  className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                >
+                  + ADD
+                </button>
               </div>
               
               {formData.experience.map((exp, index) => (
                 <div key={exp.id} className="border-2 border-white p-4 space-y-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-white font-mono uppercase font-bold">EXPERIENCE #{String(exp.id).padStart(2, '0')}</span>
+                    <button
+                      onClick={() => deleteExperience(exp.id)}
+                      className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                    >
+                      DELETE
+                    </button>
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                       <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">PERIOD</label>
@@ -325,13 +515,30 @@ export default function AdminPage() {
           {/* Education */}
           {activeSection === 'education' && (
             <div className="bg-black border-4 border-white p-6 space-y-6">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-white"></div>
-                <span className="text-white font-mono font-bold uppercase tracking-widest">EDUCATION</span>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="h-1 w-12 bg-white"></div>
+                  <span className="text-white font-mono font-bold uppercase tracking-widest">EDUCATION</span>
+                </div>
+                <button
+                  onClick={addEducation}
+                  className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                >
+                  + ADD
+                </button>
               </div>
               
               {formData.education.map((edu, index) => (
                 <div key={edu.id} className="border-2 border-white p-4 space-y-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-white font-mono uppercase font-bold">EDUCATION #{String(edu.id).padStart(2, '0')}</span>
+                    <button
+                      onClick={() => deleteEducation(edu.id)}
+                      className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                    >
+                      DELETE
+                    </button>
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
                       <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">PERIOD</label>
@@ -369,30 +576,89 @@ export default function AdminPage() {
           {/* Skills */}
           {activeSection === 'skills' && (
             <div className="bg-black border-4 border-white p-6 space-y-6">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="h-1 w-12 bg-white"></div>
-                <span className="text-white font-mono font-bold uppercase tracking-widest">SKILLS</span>
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="h-1 w-12 bg-white"></div>
+                  <span className="text-white font-mono font-bold uppercase tracking-widest">SKILLS BY CATEGORY</span>
+                </div>
+                <button
+                  onClick={addSkillCategory}
+                  className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                >
+                  + ADD CATEGORY
+                </button>
               </div>
               
-              <div>
-                <label className="block text-white font-mono uppercase font-bold mb-2">SKILLS (COMMA SEPARATED)</label>
-                <textarea
-                  value={formData.skills.join(', ')}
-                  onChange={(e) => handleSkillsChange(e.target.value)}
-                  rows={4}
-                  className="w-full bg-black border-4 border-white p-4 text-white font-mono focus:outline-none focus:bg-white focus:text-black transition-colors resize-none"
-                  placeholder="JavaScript, TypeScript, React, Next.js..."
-                />
-                <p className="text-white/60 font-mono text-xs mt-2 uppercase">Separate skills with commas</p>
-              </div>
-              
-              <div className="flex flex-wrap gap-2 pt-4 border-t-2 border-white">
-                {formData.skills.map((skill, index) => (
-                  <span key={index} className="px-3 py-1 border-2 border-white text-white font-mono font-bold uppercase text-sm">
-                    {skill}
-                  </span>
-                ))}
-              </div>
+              {formData.skills.map((category) => (
+                <div key={category.id} className="border-2 border-white p-4 space-y-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex-1">
+                      <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">CATEGORY NAME</label>
+                      <input
+                        type="text"
+                        value={category.category}
+                        onChange={(e) => updateCategoryName(category.id, e.target.value)}
+                        className="w-full bg-black border-2 border-white p-2 text-white font-mono text-sm focus:outline-none focus:bg-white focus:text-black transition-colors"
+                        placeholder="e.g., Programming Languages"
+                      />
+                    </div>
+                    <button
+                      onClick={() => deleteSkillCategory(category.id)}
+                      className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors ml-4"
+                    >
+                      DELETE CATEGORY
+                    </button>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <input
+                        type="text"
+                        value={newSkill[category.id] || ''}
+                        onChange={(e) => setNewSkill({ ...newSkill, [category.id]: e.target.value })}
+                        onKeyPress={(e) => {
+                          if (e.key === 'Enter' && newSkill[category.id]) {
+                            addSkillToCategory(category.id, newSkill[category.id]);
+                            setNewSkill({ ...newSkill, [category.id]: '' });
+                          }
+                        }}
+                        className="flex-1 bg-black border-2 border-white p-2 text-white font-mono text-sm focus:outline-none focus:bg-white focus:text-black transition-colors"
+                        placeholder="Enter skill name..."
+                      />
+                      <button
+                        onClick={() => {
+                          if (newSkill[category.id]) {
+                            addSkillToCategory(category.id, newSkill[category.id]);
+                            setNewSkill({ ...newSkill, [category.id]: '' });
+                          }
+                        }}
+                        className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                      >
+                        ADD SKILL
+                      </button>
+                    </div>
+                    
+                    <div className="flex flex-wrap gap-2 pt-2 border-t border-white/30">
+                      {category.skills.map((skill, skillIndex) => (
+                        <div key={skillIndex} className="flex items-center gap-2">
+                          <span className="px-3 py-1 border-2 border-white text-white font-mono font-bold uppercase text-sm">
+                            {skill}
+                          </span>
+                          <button
+                            onClick={() => deleteSkillFromCategory(category.id, skillIndex)}
+                            className="px-2 py-1 border-2 border-white text-white font-mono uppercase font-bold text-xs hover:bg-white hover:text-black transition-colors"
+                          >
+                            ×
+                          </button>
+                        </div>
+                      ))}
+                      {category.skills.length === 0 && (
+                        <span className="text-white/40 font-mono text-xs uppercase">No skills in this category</span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 
@@ -537,6 +803,60 @@ export default function AdminPage() {
                   ADD PROJECT
                 </button>
               </div>
+            </div>
+          )}
+
+          {/* Social */}
+          {activeSection === 'social' && (
+            <div className="bg-black border-4 border-white p-6 space-y-6">
+              <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center gap-3">
+                  <div className="h-1 w-12 bg-white"></div>
+                  <span className="text-white font-mono font-bold uppercase tracking-widest">SOCIAL LINKS</span>
+                </div>
+                <button
+                  onClick={addSocial}
+                  className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                >
+                  + ADD
+                </button>
+              </div>
+              
+              {formData.social.map((social, index) => (
+                <div key={social.id} className="border-2 border-white p-4 space-y-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-white font-mono uppercase font-bold">SOCIAL #{String(social.id).padStart(2, '0')}</span>
+                    <button
+                      onClick={() => deleteSocial(social.id)}
+                      className="px-4 py-2 border-2 border-white text-white font-mono uppercase font-bold hover:bg-white hover:text-black transition-colors"
+                    >
+                      DELETE
+                    </button>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">PLATFORM</label>
+                      <input
+                        type="text"
+                        value={social.platform}
+                        onChange={(e) => handleArrayChange('social', index, 'platform', e.target.value)}
+                        className="w-full bg-black border-2 border-white p-2 text-white font-mono text-sm focus:outline-none focus:bg-white focus:text-black transition-colors"
+                        placeholder="GitHub, LinkedIn, Twitter..."
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-white font-mono uppercase font-bold mb-2 text-xs">URL</label>
+                      <input
+                        type="text"
+                        value={social.url}
+                        onChange={(e) => handleArrayChange('social', index, 'url', e.target.value)}
+                        className="w-full bg-black border-2 border-white p-2 text-white font-mono text-sm focus:outline-none focus:bg-white focus:text-black transition-colors"
+                        placeholder="https://..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           )}
 
