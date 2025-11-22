@@ -118,21 +118,21 @@ export default function Home() {
                 <div className="h-1 w-8 bg-white group-hover:bg-black transition-colors"></div>
                 <span className="text-white group-hover:text-black font-mono uppercase font-bold">Project</span>
               </div>
-              <h3 className="text-2xl font-black text-white group-hover:text-black mb-3 uppercase tracking-tight">E-Commerce Platform</h3>
-              <p className="text-white/80 group-hover:text-black/80 mb-4 font-mono leading-relaxed">Full-stack e-commerce solution with React, Node.js, and MongoDB</p>
+              <h3 className="text-2xl font-black text-white group-hover:text-black mb-3 uppercase tracking-tight">BrainTechh Engineers Pvt. Ltd.</h3>
+              <p className="text-white/80 group-hover:text-black/80 mb-4 font-mono leading-relaxed">Designed and developed a responsive website for a Machines Technology Company in India.</p>
               <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-white text-black font-mono font-bold uppercase border-2 border-white group-hover:bg-black group-hover:text-white group-hover:border-black transition-colors">React</span>
-                <span className="px-3 py-1 bg-white text-black font-mono font-bold uppercase border-2 border-white group-hover:bg-black group-hover:text-white group-hover:border-black transition-colors">Node.js</span>
-                <span className="px-3 py-1 bg-white text-black font-mono font-bold uppercase border-2 border-white group-hover:bg-black group-hover:text-white group-hover:border-black transition-colors">MongoDB</span>
+                <span className="px-3 py-1 bg-white text-black font-mono font-bold uppercase border-2 border-white group-hover:bg-black group-hover:text-white group-hover:border-black transition-colors">Next.js</span>
+                <span className="px-3 py-1 bg-white text-black font-mono font-bold uppercase border-2 border-white group-hover:bg-black group-hover:text-white group-hover:border-black transition-colors">TypeScript</span>
+                <span className="px-3 py-1 bg-white text-black font-mono font-bold uppercase border-2 border-white group-hover:bg-black group-hover:text-white group-hover:border-black transition-colors">WEB3</span>
               </div>
             </div>
-            <a href="#" className="text-white group-hover:text-black font-black uppercase mt-4 relative z-10 flex items-center gap-2 group/link font-mono border-2 border-white group-hover:border-black px-4 py-2 hover:bg-white hover:text-black transition-colors">
+            <a href="https://www.braintechh.com/" className="text-white group-hover:text-black font-black uppercase mt-4 relative z-10 flex items-center gap-2 group/link font-mono border-2 border-white group-hover:border-black px-4 py-2 hover:bg-white hover:text-black transition-colors">
               View <span className="group-hover/link:translate-x-1 transition-transform">→</span>
             </a>
           </div>
 
           {/* Skills */}
-          <div className="bg-black border-4 border-white p-6 flex flex-col justify-between hover:bg-white hover:text-black transition-all duration-200 relative group">
+          <div className="bg-black border-4 border-white p-6 flex flex-col justify-between hover:bg-white hover:text-black transition-all duration-200 relative group overflow-hidden">
             <div className="absolute top-0 right-0 w-0 h-0 border-l-[40px] border-l-transparent border-t-[40px] border-t-white group-hover:border-t-black transition-colors"></div>
             <div className="relative z-10">
               <div className="mb-4 flex items-center gap-3">
@@ -140,11 +140,67 @@ export default function Home() {
                 <span className="text-white group-hover:text-black font-mono uppercase font-bold">Skills</span>
               </div>
               <h3 className="text-xl font-black text-white group-hover:text-black mb-4 uppercase">Skills</h3>
-              <div className="space-y-2">
-                <div className="text-white group-hover:text-black font-mono font-bold uppercase">JavaScript</div>
-                <div className="text-white group-hover:text-black font-mono font-bold uppercase">TypeScript</div>
-                <div className="text-white group-hover:text-black font-mono font-bold uppercase">React</div>
-                <div className="text-white group-hover:text-black font-mono font-bold uppercase">Next.js</div>
+              <div className="h-[200px] overflow-y-auto overflow-x-hidden scrollbar-thin">
+                <div className="space-y-4 pr-2">
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-2">Programming Languages</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">C++</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Java</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Python</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-2">App Technologies</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Java</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Kotlin</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">SQLite</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Firebase</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-2">Database Systems</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">MySQL</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">MongoDB</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-2">Analytics</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Python</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Excel</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">SQL</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Power BI</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Jupyter</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-2">Version Control</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Git</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-2">Operating Systems</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Windows</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-white/60 group-hover:text-black/60 font-mono uppercase text-xs mb-2">UI/Web Designing</div>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Figma</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Photoshop</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">HTML</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">CSS</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">Tailwind</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">React</span>
+                      <span className="px-2 py-1 bg-white text-black group-hover:bg-black group-hover:text-white font-mono font-bold uppercase text-xs border-2 border-white group-hover:border-black transition-colors">NextJS</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -158,8 +214,8 @@ export default function Home() {
                 <span className="text-white group-hover:text-black font-mono uppercase font-bold">Exp</span>
               </div>
               <h3 className="text-xl font-black text-white group-hover:text-black mb-2 uppercase">Experience</h3>
-              <p className="text-white/90 group-hover:text-black/90 mb-2 font-mono font-bold">Senior Developer</p>
-              <p className="text-white/70 group-hover:text-black/70 font-mono">Tech Corp • 2021 - Present</p>
+              <p className="text-white/90 group-hover:text-black/90 mb-2 font-mono font-bold">Web Developer</p>
+              <p className="text-white/70 group-hover:text-black/70 font-mono">Apparotech Innovations • 2025 - Present</p>
             </div>
           </div>
 
@@ -174,12 +230,12 @@ export default function Home() {
               <h3 className="text-2xl font-black text-white group-hover:text-black mb-4 uppercase tracking-tight">Projects</h3>
               <div className="space-y-4">
                 <div className="border-l-4 border-white group-hover:border-black pl-4 transition-colors">
-                  <h4 className="text-white group-hover:text-black font-black uppercase mb-1">Task Management App</h4>
-                  <p className="text-white/80 group-hover:text-black/80 font-mono">React, Firebase, Tailwind CSS</p>
+                  <h4 className="text-white group-hover:text-black font-black uppercase mb-1">BrainTechh</h4>
+                  <p className="text-white/80 group-hover:text-black/80 font-mono">Next.js, TypeScript, Tailwind CSS</p>
                 </div>
                 <div className="border-l-4 border-white group-hover:border-black pl-4 transition-colors">
-                  <h4 className="text-white group-hover:text-black font-black uppercase mb-1">Weather Dashboard</h4>
-                  <p className="text-white/80 group-hover:text-black/80 font-mono">Next.js, TypeScript, API Integration</p>
+                  <h4 className="text-white group-hover:text-black font-black uppercase mb-1">Avenue Nails & Spa</h4>
+                  <p className="text-white/80 group-hover:text-black/80 font-mono">Next.js, TypeScript, Tailwind CSS</p>
                 </div>
               </div>
             </div>
@@ -197,8 +253,8 @@ export default function Home() {
                 <span className="text-white group-hover:text-black font-mono uppercase font-bold">Edu</span>
               </div>
               <h3 className="text-xl font-black text-white group-hover:text-black mb-2 uppercase">Education</h3>
-              <p className="text-white/90 group-hover:text-black/90 mb-2 font-mono font-bold">BS Computer Science</p>
-              <p className="text-white/70 group-hover:text-black/70 font-mono">University Name • 2019</p>
+              <p className="text-white/90 group-hover:text-black/90 mb-2 font-mono font-bold">B.Tech in Computer Science and Engineering</p>
+              <p className="text-white/70 group-hover:text-black/70 font-mono">Cambridge Institute of Technology • 2021-2025</p>
             </div>
           </div>
 
@@ -213,12 +269,12 @@ export default function Home() {
               <h3 className="text-xl font-black text-white group-hover:text-black mb-4 uppercase">Stats</h3>
               <div className="space-y-3">
                 <div>
-                  <div className="text-4xl font-black text-white group-hover:text-black">50+</div>
+                  <div className="text-4xl font-black text-white group-hover:text-black">20+</div>
                   <div className="text-white/80 group-hover:text-black/80 font-mono uppercase">Projects</div>
                 </div>
                 <div>
-                  <div className="text-4xl font-black text-white group-hover:text-black">5+</div>
-                  <div className="text-white/80 group-hover:text-black/80 font-mono uppercase">Years Experience</div>
+                  <div className="text-4xl font-black text-white group-hover:text-black">4+</div>
+                  <div className="text-white/80 group-hover:text-black/80 font-mono uppercase">Months Experience</div>
                 </div>
               </div>
             </div>

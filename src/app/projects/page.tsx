@@ -38,45 +38,75 @@ function DecryptedText({ text, className = '' }: { text: string; className?: str
 const projects = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with React, Node.js, and MongoDB',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe'],
-    year: '2024'
+    title: 'BrainTechh Engineers Pvt. Ltd.',
+    description: 'A professional, fully responsive website designed for BrainTechh Engineers Pvt. Ltd.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'WEB3'],
+    year: '2025',
+    url: 'https://braintechh.com'
   },
   {
     id: 2,
-    title: 'Task Management App',
-    description: 'Collaborative task management with real-time updates',
-    technologies: ['React', 'Firebase', 'Tailwind CSS', 'TypeScript'],
-    year: '2023'
+    title: 'Avenue Nails & Spa - Canada',
+    description: 'A professional, fully responsive website designed for Avenue Nails & Spa.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'WEB3'],
+    year: '2025',
+    url: 'https://avenuenailsandspa.ca'
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
-    description: 'Real-time weather data visualization with interactive charts',
-    technologies: ['Next.js', 'TypeScript', 'API Integration', 'Chart.js'],
-    year: '2023'
+    title: 'Aaron S. Murray - Yoga & Wellness',
+    description: 'Personal website for Aaron S. Murray, a Yoga and Wellness instructor.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    year: '2025',
+    url: 'https://aaron-yoga.netlify.app'
   },
   {
     id: 4,
-    title: 'Social Media Analytics',
-    description: 'Analytics dashboard for social media metrics and insights',
-    technologies: ['Vue.js', 'Python', 'Django', 'PostgreSQL'],
-    year: '2022'
+    title: 'Shreya Vision - Eye Care Center',
+    description: 'A professional, fully responsive website designed for Shreya Vision - Eye Care Center.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'WEB3'],
+    year: '2025',
+    url: 'https://shreya-vision.netlify.app'
   },
   {
     id: 5,
-    title: 'Portfolio Website',
-    description: 'Modern portfolio website with animations and 3D effects',
-    technologies: ['Next.js', 'Three.js', 'Framer Motion', 'Tailwind CSS'],
-    year: '2024'
+    title: 'RecruitEZ - Job Portal',
+    description: 'A professional, fully responsive website designed for RecruitEZ - Job Portal.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    year: '2025',
+    url: 'https://recruitez-369.netlify.app'
   },
   {
     id: 6,
-    title: 'Chat Application',
-    description: 'Real-time messaging app with WebSocket integration',
-    technologies: ['React', 'Socket.io', 'Node.js', 'MongoDB'],
-    year: '2023'
+    title: 'Labib Dental Clinic - Dubai',
+    description: 'A professional, fully responsive website designed for Labib Dental Clinic - Dubai.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    year: '2025',
+    url: 'https://labib-dental-clinic.netlify.app'
+  },
+  {
+    id: 7,
+    title: 'Garima Dhankhar - Lawyer',
+    description: 'A professional, fully responsive website designed for Garima Dhankhar - Lawyer.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    year: '2025',
+    url: 'https://law-advocate.netlify.app'
+  },
+  {
+    id: 8,
+    title: 'Dolled Up Dimple - Makeup Artist',
+    description: 'A professional, fully responsive website designed for Dolled Up Dimple - Beautician.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    year: '2025',
+    url: 'https://dolled-up-dimple.netlify.app'
+  },
+  {
+    id: 9,
+    title: 'Nikunj Byara - Lawn & Resort',
+    description: 'A professional, fully responsive website designed for Nikunj Byara - Lawn & Resort.',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS'],
+    year: '2025',
+    url: 'https://resort-website2.netlify.app'
   }
 ];
 
@@ -179,7 +209,9 @@ export default function ProjectsPage() {
                 {/* Right side - Action */}
                 <div className="flex-shrink-0 flex items-start">
                   <a
-                    href="#"
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-white group-hover:text-black font-black uppercase flex items-center gap-2 group/link font-mono border-2 border-white group-hover:border-black px-6 py-3 hover:bg-white hover:text-black transition-colors"
                   >
                     VIEW
